@@ -1,0 +1,19 @@
+<?xml version-"1.0" encoding="UTF-8"?>
+<registro_temperatura
+
+4. XML: CREACIÖN, VALIDACIÖN Y UTILIZACIÖN
+
+8
+
+xmlns : tp : / /www.w3.org/20 01/XMLSchema- instance"
+xs:noNamespaceSchemaLocation="actividad resuelta 4 3.xsd">
+<provincia>Zamora</provincia>
+<fecha>2022-01-07</fecha>
+<temperatura minima>-5</temperatura minima>
+<temperatura maxima>4</temperatura maxima>
+< incidencias>
+<incidencia nornbre="frio" / >
+<incidencia nombre="nieve" / >
+<incidencia nombre="lluvia" / >
+< / incidencias>
+</registro temperatura>

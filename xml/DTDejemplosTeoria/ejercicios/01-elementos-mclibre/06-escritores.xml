@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE escritores [
+  <!ELEMENT escritores (escritor*)><!--me dice q escritores debe tener 0 o mas elementos escritor-->
+  <!ELEMENT escritor (nombre, nacimiento)><!--escritor debe incluir , en este orden <nombre> una sola vez y <nacimineto> una sola vez-->
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT nacimiento (#PCDATA)>
+]>
+
+<escritores>
+  <escritor>
+    <nombre>Mario Vargas Llosa</nombre>
+    <nacimiento>28 de marzo de 1936</nacimiento>
+  </escritor>
+  <escritor>
+    <nombre>Milan Kundera</nombre>
+    <nacimiento>1 de abril de 1929</nacimiento>
+  </escritor>
+</escritores>
