@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libreria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codigo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1000"></xs:minInclusive>
+                            <xs:maxInclusive value="5000"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="direccion" type="xs:string"></xs:element>
+                <xs:element name="telefono" minOccurs="2" maxOccurs="unbounded">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:pattern value="\d"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="propietario">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"></xs:element>
+                            <xs:element name="telefono"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="libro" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"></xs:element>
+                            <xs:element name="autor" type="xs:string"></xs:element>
+                            <xs:element name="formato" minOccurs="0"> </xs:element>
+                            <xs:element name="publicacion" minOccurs="0" type="xs:integer"></xs:element>
+                            <xs:element name="precio" minOccurs="0" type="xs:double"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>  
+    </xs:element>
+    <xs:simpleType name="formato">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Rústica"/>
+      <xs:enumeration value="Tapa blanda"/>
+      <xs:enumeration value="Tapa dura"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

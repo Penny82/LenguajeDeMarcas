@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="heladeria">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="helado" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element name="chocoltate" type="xs:integer"></xs:element>
+                            <xs:element name="turron" type="xs:integer"></xs:element>
+                            <xs:element name="fresa" type="xs:integer"></xs:element>
+                            <xs:element name="vainilla" type="xs:integer"></xs:element>
+                        </xs:choice>
+                        <xs:attribute name="fabricacion" type="xs:date" use="required">
+
+                        </xs:attribute>
+                    </xs:complexType>
+
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        
+    </xs:element>
+</xs:schema>

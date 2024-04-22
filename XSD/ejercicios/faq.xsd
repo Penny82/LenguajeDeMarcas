@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="faq">
+        <!-- El elemento faq está comuesto por solo un elemento info y por uno o más elementos part-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="info">
+                    <!-- El elemento info está compueto por un título, un autor, y puede tener o no email, versión y fecha-->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulo" type="xs:string"></xs:element>
+                            <xs:element name="autor" type="xs:string"></xs:element>
+                            <xs:element name="email" type="xs:string"></xs:element>
+                            <!-- El elemento versión será una plantilla que permita números seguidos de un punto y seguido de más números-->
+                            <xs:element name="version" minOccurs="0">
+                             <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\d+\.\d+"></xs:pattern>
+                                    <!-- cualquier -->
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+</xs:schema>        
